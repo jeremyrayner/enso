@@ -44,7 +44,7 @@ public class EnsoMain {
 
     public static void main(String[] args) {
         String projectName = "enso";
-        String version = "1.0.0";
+        String version = "1.0.1-SNAPSHOT";
         EnsoClient enso = new EnsoClient();
         CommandLine cmd = null;
         HelpFormatter helpFormatter = new HelpFormatter();
