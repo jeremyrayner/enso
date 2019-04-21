@@ -4,6 +4,9 @@ A program to help manipulate abstract puzzle designs into physical puzzles.
 
 ## Getting Started
 
+If you are wanting to use enso, visit <a href="http://jeremyrayner.com/puzzles/enso">jeremyrayner.com/puzzles/enso</a> website for the User Guide.
+
+The rest of these instructions are for anyone who wants to use the source code.
 These instructions will get you a copy of **enso** up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
