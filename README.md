@@ -12,7 +12,7 @@ To develop the software you will need Java:
 
 <u>Java 8 or above</u>
 
-If you don't already have Java installed, download and unpack latest stable Java version for Windows, Mac or Linux from [https://jdk.java.net/](URL)
+If you don't already have Java installed, download and unpack latest stable Java version for Windows, Mac or Linux from [https://jdk.java.net/](https://jdk.java.net/)
 
 Alternatively, you can install the latest long-term-support JDK on debian based systems with:
 ```
