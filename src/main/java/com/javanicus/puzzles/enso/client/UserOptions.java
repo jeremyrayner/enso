@@ -29,7 +29,7 @@ public class UserOptions {
     
     private BigDecimal bevel = new BigDecimal("0.5");
     private BigDecimal inset = new BigDecimal("0.07");
-    private BigDecimal scale = new BigDecimal("11.5");
+    private BigDecimal scale = new BigDecimal("11.15");
     
     private boolean onlyOutputUniqueShapes = false;
     private boolean outputEachProblemInSingleFile = false;
