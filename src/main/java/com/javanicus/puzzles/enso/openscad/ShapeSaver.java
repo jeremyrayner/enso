@@ -58,16 +58,22 @@ public class ShapeSaver {
             printWriter2.println("// needs support material to print");
         }
         printWriter2.println("");
-        printWriter2.println("include <puzzlecad.scad> // puzzlecad created by Aaron Siegel, download from https://www.thingiverse.com/thing:3198014");
+        printWriter2.println("include <puzzlecad.scad> // Puzzlecad created by Aaron Siegel, download from https://www.thingiverse.com/thing:3198014");
         printWriter2.println("");
         printWriter2.println("burr_piece(");
         StringBuilder output = new StringBuilder();
         output.append(shape.getScadCode());
         output.append(" // ").append(shapeName);
         printWriter2.println(output.toString());
-        printWriter2.print(", $burr_scale = " + userOptions.getScale());
-        printWriter2.print(", $burr_inset = " + userOptions.getInset());
-        printWriter2.print(", $burr_bevel = " + userOptions.getBevel());
+        if (userOptions.getScale() != null) {
+            printWriter2.print(", $burr_scale = " + userOptions.getScale());
+        }
+        if (userOptions.getInset() != null) {
+            printWriter2.print(", $burr_inset = " + userOptions.getInset());
+        }
+        if (userOptions.getBevel() != null) {
+            printWriter2.print(", $burr_bevel = " + userOptions.getBevel());
+        }
         printWriter2.println(");");
         if (comment != null && !comment.trim().isEmpty()) {
             printWriter2.println("");

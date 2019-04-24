@@ -57,7 +57,7 @@ public class ProblemSaver {
             printWriter1.println("// created with args: " + sb.toString());
         }
         printWriter1.println("");
-        printWriter1.println("include <puzzlecad.scad> // puzzlecad created by Aaron Siegel, download from https://www.thingiverse.com/thing:3198014");
+        printWriter1.println("include <puzzlecad.scad> // Puzzlecad created by Aaron Siegel, download from https://www.thingiverse.com/thing:3198014");
         printWriter1.println("");
         printWriter1.println("burr_plate([");
         int shapeCounter = 0;
@@ -74,9 +74,15 @@ public class ProblemSaver {
             printWriter1.println(output.toString());
         }
         printWriter1.print("]");
-        printWriter1.print(", $burr_scale = " + userOptions.getScale());
-        printWriter1.print(", $burr_inset = " + userOptions.getInset());
-        printWriter1.print(", $burr_bevel = " + userOptions.getBevel());
+        if (userOptions.getScale() != null) {
+            printWriter1.print(", $burr_scale = " + userOptions.getScale());
+        }
+        if (userOptions.getInset() != null) {
+            printWriter1.print(", $burr_inset = " + userOptions.getInset());
+        }
+        if (userOptions.getBevel() != null) {
+            printWriter1.print(", $burr_bevel = " + userOptions.getBevel());
+        }
         printWriter1.println(");");
         if (comment != null && !comment.trim().isEmpty()) {
             printWriter1.println("");

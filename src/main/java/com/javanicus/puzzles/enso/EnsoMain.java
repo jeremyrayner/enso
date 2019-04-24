@@ -64,11 +64,11 @@ public class EnsoMain {
             // read command line options
             options = new Options();
             CommandLineParser parser = new DefaultParser();
-            options.addOption(Option.builder("B").longOpt("bevel").argName("mm").numberOfArgs(1).desc("how much to bevel the edges in mm (default: " + userOptions.getBevel() +")").build());
+            options.addOption(Option.builder("B").longOpt("bevel").argName("mm").numberOfArgs(1).desc("how much to bevel the edges in mm").build());
             options.addOption(Option.builder("c").longOpt("counterweight").argName("depth").desc("how many counterweight voxels to attach to overhangs (default: 1)").numberOfArgs(1).build());
             options.addOption(Option.builder("d").longOpt("debug").desc("print debugging information").build());
             options.addOption(Option.builder("h").longOpt("help").desc("show help").build());
-            options.addOption(Option.builder("I").longOpt("inset").argName("mm").desc("the tolerance in mm (default: " + userOptions.getInset() + ")").numberOfArgs(1).build());
+            options.addOption(Option.builder("I").longOpt("inset").argName("mm").desc("the tolerance in mm").numberOfArgs(1).build());
             options.addOption(Option.builder("J").longOpt("joints").desc("prevent creation of all snap joints").build());
             options.addOption(Option.builder("j").longOpt("shape-joints").argName("shape-nums").hasArgs().valueSeparator(',').desc("which shapes to prevent creation of snap joints (default: none) e.g -j2,5").build());
             options.addOption(Option.builder("o").longOpt("output").argName("prefix").numberOfArgs(1).desc("the output name").build());
@@ -76,7 +76,7 @@ public class EnsoMain {
             options.addOption(Option.builder("P").longOpt("puzzle").argName("puzzle-nums").hasArgs().valueSeparator(',').desc("which puzzles to output (default: all) e.g -P1,2,4").build());
             options.addOption(Option.builder("R").longOpt("rotate").desc("prevent rotation of all shapes").build());
             options.addOption(Option.builder("r").longOpt("shape-rotate").argName("shape-nums").hasArgs().valueSeparator(',').desc("which shapes to prevent rotation (default: none) e.g -r4,6").build());
-            options.addOption(Option.builder("S").longOpt("scale").argName("mm").numberOfArgs(1).desc("size of a voxel in mm (default:" + userOptions.getScale() +")").build());
+            options.addOption(Option.builder("S").longOpt("scale").argName("mm").numberOfArgs(1).desc("size of a voxel in mm").build());
             options.addOption(Option.builder("s").longOpt("single").desc("output each problem in single file (default: multiple files)").build());
             options.addOption(Option.builder("u").longOpt("unique").desc("only output unique shapes (default: outputs all shapes including duplicates)").build());
             

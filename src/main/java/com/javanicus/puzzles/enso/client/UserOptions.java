@@ -27,9 +27,9 @@ public class UserOptions {
     private String outputFolderPath;
     private String outputName;
     
-    private BigDecimal bevel = new BigDecimal("0.5");
-    private BigDecimal inset = new BigDecimal("0.07");
-    private BigDecimal scale = new BigDecimal("11.15");
+    private BigDecimal bevel = null; // e.g. 0.5
+    private BigDecimal inset = null; // e.g. 0.07
+    private BigDecimal scale = null; // e.g. 11.15
     
     private boolean onlyOutputUniqueShapes = false;
     private boolean outputEachProblemInSingleFile = false;
