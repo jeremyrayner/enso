@@ -39,7 +39,7 @@ Then to run tests and build the software
 
 To verify it has worked try running this, you should then see the help screen.
 ```
-java -jar build/lib/enso-1.0.1-all.jar
+java -jar build/lib/enso-1.0.2-all.jar
 ```
 
 ### Coding Style
