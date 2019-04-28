@@ -77,8 +77,9 @@ public class ShapeSaver {
         printWriter2.println(");");
         if (comment != null && !comment.trim().isEmpty()) {
             printWriter2.println("");
-            printWriter2.println("// Original Comment:");
-            printWriter2.println("// --------------------------");
+            printWriter2.println("// ------------------");
+            printWriter2.println("// Original Comment :");
+            printWriter2.println("// ------------------");
             BufferedReader bufReader = new BufferedReader(new StringReader(comment));
             String line=null;
             try {

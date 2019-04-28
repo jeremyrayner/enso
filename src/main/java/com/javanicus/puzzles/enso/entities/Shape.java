@@ -114,6 +114,7 @@ public class Shape {
         rotatedVoxel.setXMax(originalVoxel.getXMax());
         rotatedVoxel.setYMax(originalVoxel.getZMax());
         rotatedVoxel.setZMax(originalVoxel.getYMax());
+        rotatedVoxel.setName(originalVoxel.getName());
         
         StringBuilder rotatedVoxelText = new StringBuilder();
         for (int y = originalVoxel.getYMax() - 1; y >= 0; y--) {
@@ -138,6 +139,7 @@ public class Shape {
         rotatedVoxel.setXMax(originalVoxel.getZMax());
         rotatedVoxel.setYMax(originalVoxel.getYMax());
         rotatedVoxel.setZMax(originalVoxel.getXMax());
+        rotatedVoxel.setName(originalVoxel.getName());
         
         StringBuilder rotatedVoxelText = new StringBuilder();
         for (int x = 0; x < originalVoxel.getXMax(); x++) {

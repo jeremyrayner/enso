@@ -153,6 +153,7 @@ public class SplitUnprintableShapes implements Transformation {
             zVoxel.setXMax(voxel.getXMax());
             zVoxel.setYMax(voxel.getYMax());
             zVoxel.setZMax(voxel.getZMax());
+            zVoxel.setName(voxel.getName());
             zVoxel.setText(shapeTexts[z].toString());
             Shape zShape = new Shape();
             zShape.setVoxel(zVoxel);

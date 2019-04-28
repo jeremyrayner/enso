@@ -73,6 +73,9 @@ public class PuzzleParser {
                         voxel.setXMax(Integer.parseInt(voxelNode.getAttribute("x")));
                         voxel.setYMax(Integer.parseInt(voxelNode.getAttribute("y")));
                         voxel.setZMax(Integer.parseInt(voxelNode.getAttribute("z")));
+                        if (voxelNode.hasAttribute("name")) {
+                            voxel.setName(voxelNode.getAttribute("name"));
+                        }
                         voxel.setText(voxelNode.getTextContent());
     
                         Shape shape = new Shape();
@@ -99,10 +102,18 @@ public class PuzzleParser {
                                     count = Integer.parseInt(maxString);
                                 }
                                 String name = getShapeName(id);
-                                problem.getUniqueShapes().put(name, shapes.get(id));
+                                String uniqueName = name;
+                                String voxelName = shapes.get(id).getVoxel().getName();
+                                if (voxelName != null) {
+                                    uniqueName = uniqueName + "_" + voxelName;
+                                }
+                                problem.getUniqueShapes().put(uniqueName, shapes.get(id));
                                 for (int c = 0; c < count; c++) {
                                     if (count > 1) {
                                         name = getShapeName(id) + "_" + (c + 1);
+                                    }
+                                    if (voxelName != null) {
+                                        name = name + "_" + voxelName;
                                     }
                                     problem.getAllShapes().put(name, shapes.get(id));
                                 }

@@ -22,6 +22,7 @@ public class Voxel {
     private int xMax;
     private int yMax;
     private int zMax;
+    private String name;
     private String text;
 
     public String getText() {
@@ -56,6 +57,13 @@ public class Voxel {
     }
     public void setZMax(int zMax) {
         this.zMax = zMax;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
     public String toString() {
         return "(" + xMax + "," + yMax + "," + zMax + ") " + text;

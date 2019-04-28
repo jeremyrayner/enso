@@ -80,6 +80,7 @@ public class TrimShape implements Transformation {
         trimmedVoxel.setXMax(lastX - (firstX - 1));
         trimmedVoxel.setYMax(lastY - (firstY - 1));
         trimmedVoxel.setZMax(lastZ - (firstZ - 1));
+        trimmedVoxel.setName(voxel.getName());
         trimmedVoxel.setText(trimmedShapeText.toString());
 
         Shape trimmedShape = new Shape();

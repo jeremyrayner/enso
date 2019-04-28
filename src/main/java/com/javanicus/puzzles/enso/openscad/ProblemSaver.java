@@ -86,8 +86,9 @@ public class ProblemSaver {
         printWriter1.println(");");
         if (comment != null && !comment.trim().isEmpty()) {
             printWriter1.println("");
-            printWriter1.println("// Original Comment:");
-            printWriter1.println("// --------------------------");
+            printWriter1.println("// ------------------");
+            printWriter1.println("// Original Comment :");
+            printWriter1.println("// ------------------");
             BufferedReader bufReader = new BufferedReader(new StringReader(comment));
             String line=null;
             try {
